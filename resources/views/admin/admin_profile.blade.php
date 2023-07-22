@@ -59,22 +59,47 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h3 class="card-title">Basic Form</h3>
+                        <h3 class="card-title">Update Admin Profile</h3>
 
                         <form class="forms-sample">
                             <div class="mb-3">
-                                <label for="exampleInputUsername1" class="form-label">Username</label>
-                                <input type="text" class="form-control" id="exampleInputUsername1" autocomplete="off"
-                                    placeholder="Username">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" name="username" class="form-control" id="username" autocomplete="off"
+                                    value="{{$profileData->username}}">
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" name="name" class="form-control" id="name" autocomplete="off"
+                                    value="{{$profileData->name}}">
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" autocomplete="off"
-                                    placeholder="Password">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" name="email" class="form-control" id="email" value="{{$profileData->email}}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Address</label>
+                                <input type="text" name="address" class="form-control" id="address" autocomplete="off"
+                                    value="{{$profileData->address}}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="text" name="phone" class="form-control" id="phone" autocomplete="off"
+                                    value="{{$profileData->phone}}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="role" class="form-label">Role</label>
+                                <input type="text" name="role" class="form-control" id="role" autocomplete="off"
+                                    value="{{$profileData->role}}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" name="password" class="form-control" id="password" autocomplete="off"
+                                value="{{$profileData->password}}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="photo" class="form-label">Photo Url</label>
+                                <input type="text" name="photo" class="form-control" id="photo" autocomplete="off"
+                                value="{{$profileData->photo}}">
                             </div>
                             <div class="form-check mb-3">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
