@@ -5,7 +5,7 @@
 
         <nav class="page-breadcrumb">
             <ol class="breadcrumb">
-                <a href="#" class="btn btn-info">Add Property Type</a>
+                <a href="{{route('add.type')}}" class="btn btn-info">Add Property Type</a>
 
             </ol>
         </nav>
@@ -14,7 +14,7 @@
             <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h6 class="card-title">All Types Property</h6>
+                        <h6 class="card-title">All Property Types</h6>
                         <div class="table-responsive">
                             <table id="dataTableExample" class="table">
                                 <thead>
@@ -29,11 +29,13 @@
                                     @foreach ($types as $key => $type)
                                     <tr>
                                         <td>{{$key+1}}</td>
-                                        <td>{{$type->type_naem}}</td>
+                                        <td>{{$type->type_name}}</td>
                                         <td>{{$type->type_icon}}</td>
                                         <td>
-                                            <a href="{{route('edit.type',$type->id)}}" class="btn btn-success">Edit</a>
-                                            <a href="{{route('delete.type',$type->id)}}" class="btn btn-danger">Delete</a>
+                                            {{-- {{route('edit.type',$type->id)}} --}}
+                                            <a href="#" class="btn btn-success">Edit</a>
+                                            {{-- {{route('delete.type',$type->id)}} --}}
+                                            <a href="#" class="btn btn-danger">Delete</a>
                                         </td>
                                     </tr>
                                     @endforeach
