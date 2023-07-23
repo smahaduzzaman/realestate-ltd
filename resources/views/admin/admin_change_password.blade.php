@@ -65,31 +65,34 @@ Admin Chage Password
                 <div class="card">
                     <div class="card-body">
                         <h3 class="card-title">Update Admin Password</h3>
-                        <form class="forms-sample" method="POST" action="{{ route('admin.profile.store') }}" enctype="multipart/form-data">
+                        <form class="forms-sample" method="POST" action="{{ route('admin.update.password') }}">
                             @csrf
                             <div class="mb-3">
                                 <label for="old_password" class="form-label">Old Password</label>
-                                <input type="text" name="old_password" class="form-control @error('old_password') is-invalid @enderror" id="old_password" autocomplete="off"
-                                    value="{{ $profileData->password }}">
-                                    @error('old_password')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                <input type="text" name="old_password"
+                                    class="form-control @error('old_password') is-invalid @enderror" id="old_password"
+                                    autocomplete="off">
+                                @error('old_password')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div class="mb-3">
-                                <label for="new_password" class="form-label">New Password</label>
-                                <input type="text" name="new_password" class="form-control @error('new_password') is-invalid @enderror" id="new_password" autocomplete="off"
-                                    value="{{ $profileData->password }}">
-                                    @error('new_password')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                <label for="password" class="form-label">New Password</label>
+                                <input type="text" name="password"
+                                    class="form-control @error('password') is-invalid @enderror" id="password"
+                                    autocomplete="off">
+                                @error('password')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="password_confirmation" class="form-label">Confirm Password</label>
-                                <input type="text" name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror" id="password_confirmation" autocomplete="off"
-                                    value="{{ $profileData->password }}">
-                                    @error('password_confirmation')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                <input type="text" name="password_confirmation"
+                                    class="form-control @error('password_confirmation') is-invalid @enderror"
+                                    id="password_confirmation" autocomplete="off">
+                                @error('password_confirmation')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                             <button type="submit" class="btn btn-primary me-2">Save Changes</button>
                         </form>
