@@ -21,6 +21,10 @@ License: For each use you must have a valid license purchased only from above li
 
     <title>Admin Pannel: Real Estate Ltd</title>
 
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="{{ asset('backend/assets/vendors/datatables.net-bs5/dataTables.bootstrap5.css') }}">
+    <!-- End plugin css for this page -->
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,6 +119,11 @@ License: For each use you must have a valid license purchased only from above li
             }
         @endif
     </script>
+    <!-- Start Data Table -->
+    <script src="{{asset('backend/assets/vendors/datatables.net/jquery.dataTables.js')}}"></script>
+    <script src="{{asset('backend/assets/vendors/datatables.net-bs5/dataTables.bootstrap5.js')}}"></script>
+    <script src="{{asset('backend/assets/js/data-table.js')}}"></script>
+    <!-- End Data table -->
 
 </body>
 
