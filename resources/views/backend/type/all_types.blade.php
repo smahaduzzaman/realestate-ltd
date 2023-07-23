@@ -32,10 +32,8 @@
                                         <td>{{$type->type_name}}</td>
                                         <td>{{$type->type_icon}}</td>
                                         <td>
-                                            {{-- {{route('edit.type',$type->id)}} --}}
-                                            <a href="#" class="btn btn-success">Edit</a>
-                                            {{-- {{route('delete.type',$type->id)}} --}}
-                                            <a href="#" class="btn btn-danger">Delete</a>
+                                            <a href="{{route('edit.type',$type->id)}}" class="btn btn-success">Edit</a>
+                                            <a href="" class="btn btn-danger">Delete</a>
                                         </td>
                                     </tr>
                                     @endforeach
