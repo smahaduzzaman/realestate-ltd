@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\backend\PropertyTypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,14 +44,16 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::post('/admin/update/password', [AdminController::class, 'AdminUpdatePassword'])->name('admin.update.password');
 });
 
-Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
-
 // Agent Route Group Middleware
 Route::middleware(['auth', 'role:agent'])->group(function () {
     Route::get('/agent/dashboard', [AgentController::class, 'AgentDashboard'])->name('agent.dashboard');
 });
 
-// User Route Group Middleware
-// Route::middleware(['auth', 'role:user'])->group(function () {
-//     Route::get('/user/dashboard', [UserController::class, 'UserDashboard'])->name('user.dashboard');
-// });
+Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
+
+// Property Type all Route Group Controller
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::controller(PropertyTypeController::class)->group(function () {
+        Route::get('/all/types', 'AllTypes')->name('all.types');
+    });
+});
