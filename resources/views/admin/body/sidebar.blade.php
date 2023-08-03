@@ -91,10 +91,10 @@
                 <div class="collapse" id="advancedUI">
                     <ul class="nav sub-menu">
                         <li class="nav-item">
-                            <a href="{{route('all.amenities')}}" class="nav-link">All Permission</a>
+                            <a href="{{route('all.permission')}}" class="nav-link">All Permission</a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/advanced-ui/owl-carousel.html" class="nav-link">Owl carousel</a>
+                            <a href="{{route('add.permission')}}" class="nav-link">Add Permission</a>
                         </li>
                     </ul>
                 </div>
