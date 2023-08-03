@@ -78,4 +78,6 @@ class PropertyTypeController extends Controller
 
         return redirect()->route('all.types')->with($notification);
     }
+
+    // Amenity Type Controller
 }

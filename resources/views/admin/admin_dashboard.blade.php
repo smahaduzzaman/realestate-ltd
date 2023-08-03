@@ -121,6 +121,8 @@ License: For each use you must have a valid license purchased only from above li
     </script>
     <!-- Start Data Table -->
     <script src="{{asset('backend/assets/vendors/datatables.net/jquery.dataTables.js')}}"></script>
+    <script src="{{asset('backend/assets/js/code/validate.min.js')}}"></script>
+
     <script src="{{asset('backend/assets/vendors/datatables.net-bs5/dataTables.bootstrap5.js')}}"></script>
     <script src="{{asset('backend/assets/js/data-table.js')}}"></script>
     <!-- End Data table -->

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
+use App\Http\Controllers\backend\AmenityTypeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\backend\PropertyTypeController;
 use Illuminate\Support\Facades\Route;
@@ -61,4 +62,18 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::post('/update/type/{id}', 'UpdateType')->name('update.type');
         Route::get('/delete/type/{id}', 'DeleteType')->name('delete.type');
     });
+});
+
+// Amenity Type all Route Group Controller
+// Route::middleware(['auth', 'role:admin'])->group(function () {
+
+// });
+
+Route::controller(AmenityTypeController::class)->group(function () {
+    Route::get('/all/amenities', 'AllAmenities')->name('all.amenities');
+    Route::get('/add/amenity', 'AddAmenity')->name('add.amenity');
+    Route::post('/store/amenity', 'StoreAmenity')->name('store.amenity');
+    Route::get('/edit/amenity/{id}', 'EditAmenity')->name('edit.amenity');
+    Route::post('/update/amenity/{id}', 'UpdateAmenity')->name('update.amenity');
+    Route::get('/delete/amenity/{id}', 'DeleteAmenity')->name('delete.amenity');
 });
