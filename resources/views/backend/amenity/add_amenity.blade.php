@@ -10,13 +10,12 @@ Admin Chage Password
                 <div class="card">
                     <div class="card-body">
                         <h3 class="card-title">Add Amenity</h3>
-                        <form id="myForm" class="forms-sample" method="POST" action="{{ route('store.type') }}">
+                        <form id="myForm" class="forms-sample" method="POST" action="{{ route('store.amenity') }}">
                             @csrf
                             <div class="form-group mb-3">
                                 <label for="amenity_name" class="form-label">Amenity Name</label>
                                 <input type="text" name="amenity_name"
-                                    class="form-control id="type_name">
-
+                                    class="form-control id="amenity_name">
                             </div>
                             <button type="submit" class="btn btn-primary me-2">Add Amenity</button>
                         </form>

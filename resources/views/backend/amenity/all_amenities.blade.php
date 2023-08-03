@@ -26,7 +26,7 @@
                                 <tbody>
                                     @foreach ($amenities as $key => $amenity)
                                     <tr>
-                                        <td>{{$amenity+1}}</td>
+                                        <td>{{$key+1}}</td>
                                         <td>{{$amenity->amenity_name}}</td>
                                         <td>
                                             <a href="{{route('edit.amenity',$amenity->id)}}" class="btn btn-success">Edit</a>
