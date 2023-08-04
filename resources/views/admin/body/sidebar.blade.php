@@ -96,6 +96,9 @@
                         <li class="nav-item">
                             <a href="{{route('add.permission')}}" class="nav-link">Add Permission</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('all.role')}}" class="nav-link">All Roles</a>
+                        </li>
                     </ul>
                 </div>
             </li>
